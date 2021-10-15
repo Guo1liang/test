@@ -1,5 +1,7 @@
 package com.guoliang.test;
 
+import com.guoliang.test.service.Impl.UserServiceImpl;
+import com.guoliang.test.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -8,17 +10,10 @@ class TestApplicationTests {
 
     @Test
     void contextLoads() throws Exception {
-        System.out.println(1);
-        System.out.println(2);
-        System.out.println(3);
-        System.out.println(4);
-        System.out.println(5);
-        System.out.println(6);
-        System.out.println(7);
-        System.out.println(8);
-        System.out.println(9);
-        System.out.println(10);
-        System.out.println(11);
+        UserServiceImpl userService = new UserService();
+
+        System.out.println(userService.get1());
+        System.out.println(userService.get2());
     }
 
 }
